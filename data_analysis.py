@@ -34,6 +34,7 @@ model.fit(X_train, y_train)
 ##################################################################################################
 
 #HYPERPARAMETER TUNING
+
 from sklearn.linear_model import Ridge
 from sklearn.model_selection import GridSearchCV
 
@@ -53,6 +54,7 @@ print(f"Best parameters: {best_params}")
 
 # Use the best model
 best_ridge_model = grid_search.best_estimator_
+
 ##################################################################################################
 
 #EVALUATE MODEL
@@ -65,6 +67,3 @@ y_pred = best_ridge_model.predict(X_test)
 # Calculate and print the mean squared error
 mse = mean_squared_error(y_test, y_pred)
 print(f"Mean Squared Error: {mse}")
-
-
-
